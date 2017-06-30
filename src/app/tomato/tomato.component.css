@@ -14,6 +14,10 @@
   transition: 0.5s all ease-out;
 }
 
+#tomato:focus {
+  outline: none;
+}
+
 #tomato-bottom, #tomato-top {
   position: relative;
   top: 40px;
@@ -32,6 +36,7 @@
   border-radius: 300px 300px 0 0;
   box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
   background-color: #D9212D;
+  border-bottom: 5px solid #b11b25;
 }
 
 .bottom {
@@ -42,18 +47,19 @@
   border-radius: 0 0 300px 300px;
   box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
   background-color: #D9212D;
+  border-top: 5px solid #b11b25;
 }
 
-#tomato-bottom1, #tomato-top1 {
+#tomato-bottom1, #tomato-top3 {
   left: 50px;
 }
 
-#tomato-bottom2, #tomato-top2 {
+#tomato-bottom2, #tomato-top1, #tomato-top5 {
   box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2), inset -40px 0px 10px -30px rgba(255, 255, 255, 0.1);
   z-index: 1;
 }
 
-#tomato-bottom3, #tomato-top3 {
+#tomato-bottom3, #tomato-top2, #tomato-top4 {
   right: 50px;
 }
 
@@ -119,7 +125,7 @@
 #clock {
   font-family: 'Alfa Slab One', cursive;
   letter-spacing: 4px;
-  line-height: 65px;
+  line-height: 73px;
   font-size: 3.5em;
   font-weight: 900;
   color: #D9212D;
@@ -157,22 +163,37 @@
   flex-direction: column;
 }
 
-#tomato:hover #tomato-top {
+#tomato:hover #tomato-top, #tomato:focus #tomato-top {
   top: -20px;
 }
 
-#tomato:hover #leaves {
+#tomato:hover #leaves, #tomato:focus #leaves {
   top: -55px;
 }
 
-#tomato:hover #stem {
+#tomato:hover #stem, #tomato:focus #stem {
   top: -50px;
 }
 
-#tomato:hover #timer {
+#tomato:hover #timer, #tomato:focus #timer {
   top: 130px;
   animation: 0.25s fadeIn;
   animation-fill-mode: forwards;
+}
+
+#work-break {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Alfa Slab One', cursive;
+  color: #e97c83;
+  font-size: 2.5em;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 55%;
+  z-index: 3;
 }
 
 @media (max-width: 400px) {
@@ -197,11 +218,15 @@
     width: 290px;
     height: 65px;
   }
-  #tomato:hover #timer {
+  #tomato:hover #timer, #tomato:focus #timer {
     top: 80px;
   }
-
   #clock {
-    font-size: 3em;
+    font-size: 2.5em;
+    width: 140px;
+  }
+  #work-break {
+    font-size: 1.8em;
+    top: 40%;
   }
 }

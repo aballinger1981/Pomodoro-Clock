@@ -8,7 +8,7 @@ export class TimerService {
   public secondsToUse: string;
   public numberOfPomodoros: number = 0;
   public startTime: number = 0;
-  public intervalId: any;
+  public timerInterval: any;
   public timerIsRunning: boolean = false;
   public pauseStartTime: number = 0;
   public pausedTime: number = 0;
@@ -24,7 +24,7 @@ export class TimerService {
       this.playOrPauseClassName = 'timer-button fa fa-pause';
       this.startTimerTracking();
     } else if (this.timerIsRunning) {
-      clearInterval(this.intervalId);
+      clearInterval(this.timerInterval);
       this.timerIsRunning = false;
       this.pauseStartTime = new Date().getTime();
       this.playOrPauseClassName = 'timer-button fa fa-play';
@@ -36,7 +36,7 @@ export class TimerService {
       this.startTime = new Date().getTime();
     }
     this.timerIsRunning = true;
-    this.intervalId = setInterval(() => { this.getTimeRemaining(); }, 100);
+    this.timerInterval = setInterval(() => { this.getTimeRemaining(); }, 100);
   }
 
   public getTimeRemaining(): void {
@@ -65,7 +65,7 @@ export class TimerService {
 
   public checkIfTimerIsFinished(timeLeft: number): void {
     if (timeLeft < 0) {
-      clearInterval(this.intervalId);
+      clearInterval(this.timerInterval);
       this.timerIsRunning = false;
       this.pausedTime = 0;
       this.startTime = 0;
@@ -85,7 +85,7 @@ export class TimerService {
 
   public stopTimer(): void {
     this.playOrPauseClassName = 'timer-button fa fa-play';
-    clearInterval(this.intervalId);
+    clearInterval(this.timerInterval);
     this.timerIsRunning = false;
     this.pausedTime = 0;
     this.pauseStartTime = 0;

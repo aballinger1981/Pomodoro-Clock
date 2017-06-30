@@ -1,4 +1,4 @@
-<div id="tomato">
+<div id="tomato" tabindex="0">
   <div id="stem"></div>
   <div id="leaves">
     <div id="leaf1" class="leaf"></div>
@@ -9,6 +9,8 @@
     <div id="tomato-top1" class="top"></div>
     <div id="tomato-top2" class="top"></div>
     <div id="tomato-top3" class="top"></div>
+    <div id="tomato-top4" class="top"></div>
+    <div id="tomato-top5" class="top"></div>
   </div>
 
   <div id="tomato-bottom">
@@ -37,5 +39,10 @@
     </div>
     <i id="stop" class="timer-button fa fa-stop"
     (click)="timerService.stopTimer()"></i>
+  </div>
+
+  <div id="work-break" *ngIf="timerService.timerIsRunning">
+    <span *ngIf="timerService.numberOfPomodoros % 2 === 0">Work Time</span>
+    <span *ngIf="timerService.numberOfPomodoros % 2 !== 0">Break Time</span>
   </div>
 </div>

@@ -13,13 +13,13 @@ html, body {
   height: 100% !important;
   vertical-align: middle !important;
   text-align: center !important;
-  line-height: 65px !important;
+  line-height: 70px !important;
   color: #D9212D;
 }
 
 .fa-chevron-up, .fa-chevron-down {
   font-size: 2em !important;
-  line-height: 28px !important;
+  line-height: 33px !important;
 }
 
 .fa:hover {
