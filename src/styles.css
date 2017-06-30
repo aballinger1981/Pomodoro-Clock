@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #EC965B;
+}
+
+.fa {
+  font-size: 3em !important;
+  height: 100% !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  line-height: 60px !important;
+  color: #D9212D;
+}
+
+.fa-caret-up, .fa-caret-down {
+  font-size: 4em !important;
+  height: 50% !important;
+  line-height: 25px !important;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .fa {
+    font-size: 2em !important;
+  }
+
+  .fa-caret-up, .fa-caret-down {
+    height: 30% !important;
+    line-height: 38px !important;
+  }
+
+}

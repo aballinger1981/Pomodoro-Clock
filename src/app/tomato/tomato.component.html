@@ -1,0 +1,39 @@
+<div id="tomato">
+  <div id="stem"></div>
+  <div id="leaves">
+    <div id="leaf1" class="leaf"></div>
+    <div id="leaf2" class="leaf"></div>
+  </div>
+
+  <div id="tomato-top">
+    <div id="tomato-top1" class="top"></div>
+    <div id="tomato-top2" class="top"></div>
+    <div id="tomato-top3" class="top"></div>
+  </div>
+
+  <div id="tomato-bottom">
+    <div id="tomato-bottom1" class="bottom"></div>
+    <div id="tomato-bottom2" class="bottom"></div>
+    <div id="tomato-bottom3" class="bottom"></div>
+  </div>
+
+  <div id="timer">
+    <i id="play-pause" [className]="timerService.playOrPauseClassName"
+    (click)="timerService.startOrPauseTimer()"></i>
+    <div id="minutes">
+      <i id="minute-up" class="timer-button fa fa-caret-up"
+      (click)="timerService.addMinutes()"></i>
+      <i id="minute-down" class="timer-button fa fa-caret-down"
+      (click)="timerService.subtractMinutes()"></i>
+    </div>
+    <span class="clock">{{timerService.minutes}}</span><span id="colon">:</span><span class="clock">{{timerService.seconds}}</span>
+    <div id="seconds">
+      <i id="second-up" class="timer-button fa fa-caret-up"
+      (click)="timerService.addSeconds()"></i>
+      <i id="second-down" class="timer-button fa fa-caret-down"
+      (click)="timerService.subtractSeconds()"></i>
+    </div>
+    <i id="stop" class="timer-button fa fa-stop"
+    (click)="timerService.stopTimer()"></i>
+  </div>
+</div>

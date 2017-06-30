@@ -1,0 +1,197 @@
+
+@import '../../../node_modules/font-awesome/css/font-awesome.css';
+
+#tomato {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  max-width: 400px;
+  max-height: 400px;
+  text-align: center;
+  transition: 0.5s all ease-out;
+}
+
+#tomato-bottom, #tomato-top {
+  position: relative;
+  top: 40px;
+  width: 300px;
+  height: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: top 0.5s;
+}
+
+.top {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  border-radius: 300px 300px 0 0;
+  box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
+  background-color: #D9212D;
+}
+
+.bottom {
+  position: absolute;
+  top: 5px;
+  width: 300px;
+  height: 150px;
+  border-radius: 0 0 300px 300px;
+  box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
+  background-color: #D9212D;
+}
+
+#tomato-bottom1, #tomato-top1 {
+  left: 50px;
+}
+
+#tomato-bottom2, #tomato-top2 {
+  box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2), inset -40px 0px 10px -30px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+#tomato-bottom3, #tomato-top3 {
+  right: 50px;
+}
+
+#stem {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background-color: green;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin: auto;
+  z-index: 1;
+  transition: top 0.5s;
+}
+
+#leaves {
+  position: absolute;
+  left: 50%;
+  z-index: 0;
+  top: 5px;
+  transition: top 0.5s;
+}
+
+.leaf {
+  position: absolute;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid green;
+  border-radius: 40px;
+  left: -132px;
+}
+
+#leaf1 {
+  border-left: 130px solid green;
+  border-right: 130px solid darkgreen;
+}
+
+#leaf2 {
+  border-left: 0px solid green;
+  border-right: 0px solid darkgreen;
+}
+
+#timer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: absolute;
+  transition: top 0.5s;
+  top: 191px;
+  width: 390px;
+  height: 65px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  border-right: 5px solid #D9212D;
+  border-left: 5px solid #DF4C56;
+}
+
+.clock, #colon {
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 4px;
+  line-height: 65px;
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #D9212D;
+}
+
+#colon {
+  line-height: 50px;
+  margin-left: -9px;
+  margin-right: -9px;
+}
+
+@keyframes fadeIn {
+  60% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+#minutes, #seconds {
+  display: flex;
+  flex-direction: column;
+}
+
+#tomato:hover #tomato-top {
+  top: -20px;
+}
+
+#tomato:hover #leaves {
+  top: -55px;
+}
+
+#tomato:hover #stem {
+  top: -50px;
+}
+
+#tomato:hover #timer {
+  top: 130px;
+  animation: 0.25s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 400px) {
+  #tomato-bottom, #tomato-top {
+    width: 200px;
+    height: 100px;
+    }
+  .top {
+    width: 200px;
+    height: 100px;
+    border-radius: 300px 300px 0 0;
+    box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
+  }
+  .bottom {
+    top: 5px;
+    width: 200px;
+    height: 100px;
+    border-radius: 0 0 300px 300px;
+    box-shadow: inset 40px 0px 50px rgba(255, 255, 255, 0.2);
+  }
+  #timer {
+    width: 290px;
+    height: 65px;
+  }
+  #tomato:hover #timer {
+    top: 80px;
+  }
+
+  .clock, #colon {
+    font-size: 3em;
+  }
+}
