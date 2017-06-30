@@ -21,16 +21,18 @@
     <i id="play-pause" [className]="timerService.playOrPauseClassName"
     (click)="timerService.startOrPauseTimer()"></i>
     <div id="minutes">
-      <i id="minute-up" class="timer-button fa fa-caret-up"
+      <i id="minute-up" class="timer-button fa fa-chevron-up"
       (click)="timerService.addMinutes()"></i>
-      <i id="minute-down" class="timer-button fa fa-caret-down"
+      <i id="minute-down" class="timer-button fa fa-chevron-down"
       (click)="timerService.subtractMinutes()"></i>
     </div>
-    <span class="clock">{{timerService.minutes}}</span><span id="colon">:</span><span class="clock">{{timerService.seconds}}</span>
+    <div id="clock">
+      <span class="time">{{timerService.minutes}}</span><span id="colon">:</span><span class="time">{{timerService.seconds}}</span>
+    </div>
     <div id="seconds">
-      <i id="second-up" class="timer-button fa fa-caret-up"
+      <i id="second-up" class="timer-button fa fa-chevron-up"
       (click)="timerService.addSeconds()"></i>
-      <i id="second-down" class="timer-button fa fa-caret-down"
+      <i id="second-down" class="timer-button fa fa-chevron-down"
       (click)="timerService.subtractSeconds()"></i>
     </div>
     <i id="stop" class="timer-button fa fa-stop"

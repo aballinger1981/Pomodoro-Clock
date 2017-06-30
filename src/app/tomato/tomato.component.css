@@ -116,19 +116,29 @@
   border-left: 5px solid #DF4C56;
 }
 
-.clock, #colon {
+#clock {
   font-family: 'Alfa Slab One', cursive;
   letter-spacing: 4px;
   line-height: 65px;
   font-size: 3.5em;
-  font-weight: 700;
+  font-weight: 900;
   color: #D9212D;
+  width: 190px;
 }
 
 #colon {
-  line-height: 50px;
-  margin-left: -9px;
-  margin-right: -9px;
+  position: relative;
+  font-size: 1em;
+  margin-bottom: 10px;
+  top: -7px;
+}
+
+#minutes, #seconds {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes fadeIn {
@@ -191,7 +201,7 @@
     top: 80px;
   }
 
-  .clock, #colon {
+  #clock {
     font-size: 3em;
   }
 }

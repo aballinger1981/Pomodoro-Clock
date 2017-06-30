@@ -13,14 +13,13 @@ html, body {
   height: 100% !important;
   vertical-align: middle !important;
   text-align: center !important;
-  line-height: 60px !important;
+  line-height: 65px !important;
   color: #D9212D;
 }
 
-.fa-caret-up, .fa-caret-down {
-  font-size: 4em !important;
-  height: 50% !important;
-  line-height: 25px !important;
+.fa-chevron-up, .fa-chevron-down {
+  font-size: 2em !important;
+  line-height: 28px !important;
 }
 
 .fa:hover {
