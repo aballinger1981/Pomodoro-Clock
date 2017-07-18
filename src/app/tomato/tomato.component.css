@@ -8,8 +8,8 @@
   bottom: 0;
   top: 0;
   margin: auto;
-  max-width: 400px;
-  max-height: 400px;
+  width: 400px;
+  height: 400px;
   text-align: center;
   transition: 0.5s all ease-out;
 }

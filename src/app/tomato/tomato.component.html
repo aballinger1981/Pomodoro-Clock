@@ -1,4 +1,4 @@
-<div id="tomato" tabindex="0">
+<div id="tomato" tabindex="0" #tomato>
   <div id="work-break" *ngIf="timerService.timerIsRunning">
     <span *ngIf="timerService.numberOfPomodoros % 2 === 0">Work Time</span>
     <span *ngIf="timerService.numberOfPomodoros % 2 !== 0">Break Time</span>
@@ -9,7 +9,7 @@
     <div id="leaf2" class="leaf"></div>
   </div>
 
-  <div id="tomato-top">
+  <div id="tomato-top" (click)="setFocus()">
     <div id="tomato-top1" class="top"></div>
     <div id="tomato-top2" class="top"></div>
     <div id="tomato-top3" class="top"></div>
@@ -17,13 +17,13 @@
     <div id="tomato-top5" class="top"></div>
   </div>
 
-  <div id="tomato-bottom">
+  <div id="tomato-bottom" (click)="setFocus()">
     <div id="tomato-bottom1" class="bottom"></div>
     <div id="tomato-bottom2" class="bottom"></div>
     <div id="tomato-bottom3" class="bottom"></div>
   </div>
 
-  <div id="timer">
+  <div id="timer" (click)="setFocus()">
     <i id="play-pause" [className]="timerService.playOrPauseClassName"
     (click)="timerService.startOrPauseTimer()"></i>
     <div id="minutes">
